@@ -1,0 +1,84 @@
+/* 
+ * Note: Global variables are found in style.css
+ * /
+
+/* file explorer section */
+.file-explorer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 15px;
+  height: 100%;
+  width: 70px;
+
+  background-color: lightslategray;
+}
+
+.file-explorer-icons {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+  padding: 10px;
+  width: 100%;
+}
+
+.file-explorer-icons:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+/* resume icon */
+.file-explorer .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  color: whitesmoke;
+  font-size: 40px;
+}
+
+/* sidebar styling */
+.sidebar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  width: 275px;
+  background-color: var(--editor-color-dark);
+  padding-left: 25px;
+  padding-top: 15px;
+}
+
+button.navigation-element {
+  align-items: center;
+  border: none;
+  background-color: var(--editor-color-dark);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  height: 50px;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+  width: 155px;
+}
+
+button.navigation-element:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  border-radius: 8px 8px 8px 8px;
+}
+
+button.navigation-element:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.navigation-element.title-text {
+  color: white;
+  justify-content: space-between;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 50px;
+  background-color: var(--editor-color-dark);
+}

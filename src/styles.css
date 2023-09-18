@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&display=swap");
+:root {
+  --coding-section-color: #303c52; /* This is for the tab, current directory bar, and code section */
+  --editor-color-dark: #23272f; /* This is for the main editor parts */
+  --editor-numbers-color: #9aa6c1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: var(--editor-color-dark);
+}
+
+::-webkit-scrollbar {
+  height: fit-content;
+  background-color: var(--coding-section-color);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: var(--editor-color-dark);
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/* Tabs styling */
+.tab-bar {
+  display: flex;
+  width: 100%;
+
+  height: 45px;
+  background-color: var(--editor-color-dark);
+}
+
+.top-bar.light {
+  background-color: white;
+}
+
+.tab {
+  box-sizing: border-box;
+  border-radius: 4px 4px 0px 0px;
+  border-left: 1px solid rgb(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  height: 45px;
+  width: 200px;
+  background-color: var(--editor-color-dark);
+}
+
+.tab:hover {
+  cursor: pointer;
+}
+
+.tab.selected {
+  background-color: var(--coding-section-color);
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: center;
+  width: fit-content;
+
+  color: white;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+.tab-close-button {
+  align-items: center;
+  background-color: inherit;
+  border: none;
+  content: none;
+  color: white;
+  display: flex;
+  text-decoration: none;
+}
+
+.tab-close-button:hover {
+  background-color: rgb(255, 255, 255, 0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+/* Coding section styling */
+.code-section-wrapper {
+  width: calc(100% - 275px);
+  background-color: var(--coding-section-color);
+}
+
+.coding-section {
+  /* includes numbers and intro */
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  padding-top: 10px;
+  height: 80%;
+  background-color: var(--coding-section-color);
+  overflow-y: scroll;
+}
+
+.numbers-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.coding-section .numbers {
+  color: var(--editor-numbers-color);
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 16px;
+  padding-bottom: 9.5px;
+  padding-left: 10px;
+  z-index: 1;
+}
+
+.code-section-wrapper .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.current-directory-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  position: fixed;
+
+  width: 100%;
+  height: 35px;
+  background-color: var(--coding-section-color);
+
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.8px;
+  font-size: 14px;
+  color: white;
+}
+
+.main-function-wrapper {
+  padding-top: 25px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  font-size: 25px;
+  font-family: "Roboto Mono", sans-serif;
+}
+
+/* Who am I content */
+.introduction-container {
+  box-sizing: border-box;
+  display: flex;
+  padding-left: 20px;
+  padding-top: 10px;
+
+  width: 100%;
+}
+
+.my-introduction-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+  color: white;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 18px;
+  width: fit-content;
+}
+
+.goals-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.goal-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  border: 2px solid aqua;
+  border-radius: 12px;
+  /* margin-right: 50px; */
+  padding: 10px;
+  height: 250px;
+  width: 200px;
+
+  font-size: 15px;
+}
+
+/* Toggle styling  */
+.dark-mode-toggle {
+  position: absolute;
+  bottom: 60px;
+  padding: none;
+  width: 60px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: #23272f;
+}
+
+.toggle-circle {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  background-color: white;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+.dark-mode-toggle:hover {
+  cursor: pointer;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  width: 100%;
+  height: 18px;
+  top: 0px;
+  background-color: var(--editor-color-dark);
+}
+
+.bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  bottom: 0px;
+  background-color: black;
+  z-index: 2;
+}
+
+.bottom-bar.light {
+  background-color: white;
+}
